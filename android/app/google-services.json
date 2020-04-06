@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "571953819443",
+    "firebase_url": "https://shareapp-d5ff4.firebaseio.com",
+    "project_id": "shareapp-d5ff4",
+    "storage_bucket": "shareapp-d5ff4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571953819443:android:a7574c56ad0157fb121846",
+        "android_client_info": {
+          "package_name": "com.andressariasp.shareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571953819443-p44sl3fsvm8i0b99j49urjshmaq3gk8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andressariasp.shareapp",
+            "certificate_hash": "f2d0648e7f3cff78664f80624feeb3d01369155b"
+          }
+        },
+        {
+          "client_id": "571953819443-br8hp78glbaihd8l0175bj7kavfssn90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgp-swNcTx2BSypmK6x4KCzRN5WLUU0O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571953819443-br8hp78glbaihd8l0175bj7kavfssn90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
