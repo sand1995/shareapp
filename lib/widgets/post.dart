@@ -5,6 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:share_app/models/user.dart';
+import 'package:share_app/pages/comments.dart';
 import 'package:share_app/pages/home.dart';
 import 'package:share_app/widgets/custom_image.dart';
 
@@ -165,7 +166,7 @@ class _PostState extends State<Post> {
     bool _isLiked = likes[currentUserId] == true;
 
     if (_isLiked) {
-      postRef
+      postsRef
           .document(ownerId)
           .collection('userPosts')
           .document(postId)
@@ -176,7 +177,7 @@ class _PostState extends State<Post> {
         likes[currentUserId] = false;
       });
     } else if (!_isLiked) {
-      postRef
+      postsRef
           .document(ownerId)
           .collection('userPosts')
           .document(postId)
@@ -212,7 +213,12 @@ class _PostState extends State<Post> {
             ),
             Padding(padding: EdgeInsets.only(right: 20.0)),
             GestureDetector(
-              onTap: () => "show comments",
+              onTap: () => showCommets(
+                context,
+                postId: postId,
+                ownerId: ownerId,
+                mediaUrl: mediaUrl,
+              ),
               child: Icon(
                 Icons.chat,
                 size: 28.0,
@@ -249,5 +255,16 @@ class _PostState extends State<Post> {
         ),
       ],
     );
+  }
+
+  showCommets(BuildContext context,
+      {String postId, String ownerId, String mediaUrl}) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return Comments(
+        postId: postId,
+        postOwnerId: ownerId,
+        postMediaUrl: mediaUrl,
+      );
+    }));
   }
 }

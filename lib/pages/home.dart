@@ -14,7 +14,8 @@ import 'package:share_app/models/user.dart';
 final GoogleSignIn googleSignIn = GoogleSignIn();
 final StorageReference storageRef = FirebaseStorage.instance.ref();
 final userRef = Firestore.instance.collection('users');
-final postRef = Firestore.instance.collection('posts');
+final postsRef = Firestore.instance.collection('posts');
+final commenstRef = Firestore.instance.collection('comments');
 final DateTime timestamp = DateTime.now();
 User currentUser;
 

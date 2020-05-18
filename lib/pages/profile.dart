@@ -35,7 +35,7 @@ class _ProfileState extends State<Profile> {
     setState(() {
       isLoading = true;
     });
-    QuerySnapshot snapshot = await postRef
+    QuerySnapshot snapshot = await postsRef
         .document(widget.profileId)
         .collection('userPosts')
         .orderBy('timeStamp', descending: true)
