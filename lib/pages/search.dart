@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:share_app/models/user.dart';
+import 'package:share_app/pages/activity_feed.dart';
 import 'package:share_app/pages/timeline.dart';
 import 'package:share_app/widgets/progress.dart';
 
@@ -114,7 +115,7 @@ class UserResult extends StatelessWidget {
       child: Column(
         children: <Widget>[
           GestureDetector(
-            onTap: () => print("Tapped"),
+            onTap: () => showProfile(context, profileId: user.id),
             child: ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.grey,
